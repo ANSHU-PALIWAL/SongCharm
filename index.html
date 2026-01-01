@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongCharm | Custom Music Creations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>Song<span>Charm</span></h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#samples">Samples</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#order-form">Start Song</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="https://wa.me/916378853658" class="whatsapp-btn-header" target="_blank">
+                <i class="fab fa-whatsapp"></i> <span>Contact</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <a href="#samples" onclick="toggleMenu()">Samples</a>
+        <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+        <a href="#order-form" onclick="toggleMenu()">Start My Song</a>
+    </div>
+
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h1>Turn Your Stories Into <span class="highlight">Unique Melodies</span></h1>
+                <p>Give us the details about your special someone, and we'll compose a professional, custom song that
+                    captures your bond forever. The perfect gift for birthdays, anniversaries, or just because.</p>
+                <a href="#order-form" class="cta-btn">Start Your Song</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/2045330498/photo/girl-composer-playing-the-guitar-composing-new-song-outdoors-near-bonfire.jpg?s=612x612&w=0&k=20&c=IoNbE35AazD94cg_3V5_6NjL2CWGN9uQmSdE6YUt3Gg="
+                    alt="Composer with guitar">
+            </div>
+        </div>
+    </section>
+
+    <section id="samples" class="preview-section">
+        <div class="container">
+            <h2 class="section-title light">Listen to Our Samples</h2>
+            <div class="preview-grid">
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <div>
+                            <h4>Acoustic Soul</h4>
+                            <p>Perfect for Anniversaries</p>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="#" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div>
+                            <h4>Upbeat Pop</h4>
+                            <p>Best for Birthdays</p>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="single-pricing-card">
+                <div class="price-header">
+                    <h3>Simple Pricing</h3>
+                    <p>Everything you need for the perfect gift</p>
+                </div>
+
+                <ul class="price-features">
+                    <li>
+                        <span class="emoji">🎧</span>
+                        <span class="text">Your story, your song</span>
+                    </li>
+                    <li>
+                        <span class="emoji">⚡</span>
+                        <span class="text">Custom song in 24 hours</span>
+                    </li>
+                    <li>
+                        <span class="emoji">💰</span>
+                        <span class="text price-highlight">₹799 per song</span>
+                    </li>
+                    <li class="offer-row">
+                        <span class="emoji">🔥</span>
+                        <span class="text">First 5 customers get <span class="badge">30% OFF</span></span>
+                    </li>
+                    <li>
+                        <span class="emoji">💜</span>
+                        <span class="text">Turn your moments into music</span>
+                    </li>
+                </ul>
+
+                <a href="#order-form" class="price-cta-btn">Create My Song Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="order-form" class="form-section">
+        <div class="container">
+            <h2 class="section-title">Tell Us Your Story</h2>
+            <div class="form-card">
+                <p class="form-description">Fill out the details below so we can start composing your masterpiece.</p>
+                <form>
+                    <div class="form-group">
+                        <label>Your Full Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Who is this song for?</label>
+                        <input type="text" placeholder="Name of person receiving the song" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Occasion</label>
+                        <select required>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="love">Love / Romantic</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Story / Details</label>
+                        <textarea rows="5"
+                            placeholder="Tell us about their hobbies, memories, or special things you want in the lyrics..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Details via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Song<span>Charm</span></h2>
+                <p>Turning memories into melodies.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/song.charm?igsh=ZXB3YjFvdHRoY2lu" target="_blank"
+                        class="social-link insta">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/916378853658" target="_blank" class="social-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/songcharm.com/" target="_blank"
+                        class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:contact@songcharm.com" class="social-link email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SongCharm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
