@@ -8,7 +8,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* FIX FOR SMOOTH SCROLLING FLICKER */
 html {
     scroll-behavior: smooth;
 }
@@ -69,6 +68,10 @@ header {
     width: 100%;
 }
 
+.logo {
+    display: flex;
+}
+
 .logo h2 {
     font-size: 1.5rem;
     color: var(--light);
@@ -95,7 +98,7 @@ header {
     color: var(--gold);
 }
 
-/* Sticky WhatsApp Button Styles */
+/* Sticky WhatsApp Button */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -120,7 +123,7 @@ header {
     transform: scale(1.1);
 }
 
-/* Mobile Menu Toggle */
+/* Mobile Menu */
 .menu-toggle {
     display: none;
     color: white;
@@ -235,7 +238,6 @@ header {
 
 .preview-grid {
     display: grid;
-    /* This creates automatic columns (2 columns on desktop approx) */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
@@ -284,103 +286,82 @@ header {
     border-radius: 5px;
 }
 
+
 /* =========================
-   5. PRICING SECTION
+   5. SERVICES SLIDER
 ========================= */
-.pricing-section {
-    padding: 80px 0;
-    background-color: var(--gray-bg);
+.services-slider-section {
+    padding: 80px 0 60px;
+    background-color: #f8f9fa;
 }
 
-.single-pricing-card {
-    max-width: 600px;
-    margin: auto;
-    background: var(--dark-bg);
-    color: white;
-    border-radius: 20px;
-    padding: 50px 30px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+.services-swiper {
+    padding-bottom: 40px;
+}
+
+.service-card {
     position: relative;
+    height: 400px;
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.price-header {
-    text-align: center;
-    margin-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 20px;
-}
-
-.price-header h3 {
-    font-size: 2rem;
-    color: var(--gold);
-    margin-bottom: 10px;
-}
-
-.price-features {
-    list-style: none;
-    margin-bottom: 40px;
-}
-
-.price-features li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 1.15rem;
-}
-
-.price-features .emoji {
-    font-size: 1.5rem;
-    margin-right: 20px;
-    width: 30px;
-    text-align: center;
-}
-
-.price-highlight {
-    font-weight: 700;
-    color: var(--gold);
-    font-size: 1.4rem;
-}
-
-.offer-row {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 12px;
-    border-radius: 10px;
-}
-
-.badge {
-    background: #ff4757;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-left: 5px;
-}
-
-.price-cta-btn {
-    display: block;
+.service-card img {
     width: 100%;
-    padding: 18px;
-    background: var(--primary);
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    transition: background 0.3s;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-.price-cta-btn:hover {
-    background: var(--primary-dark);
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 40px 20px 30px;
+    z-index: 2;
+}
+
+.card-overlay h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.services-slider-section .swiper-pagination {
+    position: relative;
+    bottom: 0 !important;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+    width: 25px;
+    border-radius: 5px;
+    transition: width 0.3s ease;
 }
 
 /* =========================
    6. FORM SECTION
 ========================= */
-
-/* Use Flexbox for side-by-side inputs */
 .form-row {
     display: flex;
     gap: 20px;
@@ -392,7 +373,6 @@ header {
     background: white;
 }
 
-/* Ensure inputs inside rows take full width of their column */
 .form-row .form-group {
     flex: 1;
     margin-bottom: 0;
@@ -553,101 +533,9 @@ footer {
 }
 
 /* =========================
-   CORRECTED: SERVICES SLIDER
-========================= */
-.services-slider-section {
-    padding: 80px 0 60px;
-    /* Added padding bottom for pagination space */
-    background-color: #f8f9fa;
-}
-
-/* The Swiper Container */
-.services-swiper {
-    padding-bottom: 40px;
-    /* Ensure space inside container for dots if needed */
-}
-
-.service-card {
-    position: relative;
-    height: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    /* Stable shadow that doesn't move/drop on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    /* Removed transition on the card itself to stop the "lift" */
-}
-
-/* REMOVED the card lift effect to fix the "dropping shadow" issue */
-/* .service-card:hover { transform: translateY(-5px); } */
-
-.service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-    /* Slower, smoother zoom */
-}
-
-/* Only zoom the image on hover, keep card stable */
-.service-card:hover img {
-    transform: scale(1.1);
-}
-
-/* Black Gradient Overlay */
-.card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    padding: 40px 20px 30px;
-    /* Adjusted padding */
-    z-index: 2;
-}
-
-.card-overlay h3 {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-}
-
-/* --- FIX PAGINATION POSITION --- */
-.services-slider-section .swiper-pagination {
-    position: relative;
-    /* Stops it from overlapping the slides */
-    bottom: 0 !important;
-    /* Reset default Swiper positioning */
-    margin-top: 30px;
-    /* Pushes it down away from images */
-    text-align: center;
-}
-
-/* Pagination Dots Styling */
-.swiper-pagination-bullet {
-    background: #ccc;
-    opacity: 1;
-    width: 10px;
-    height: 10px;
-    margin: 0 6px !important;
-}
-
-.swiper-pagination-bullet-active {
-    background: var(--primary) !important;
-    width: 25px;
-    /* Make active dot wider */
-    border-radius: 5px;
-    transition: width 0.3s ease;
-}
-
-
-/* =========================
-   8. RESPONSIVE DESIGN (Updated)
+   8. RESPONSIVE DESIGN (General)
 ========================= */
 
-/* Tablet & Small Laptop (max-width 900px) */
 @media (max-width: 900px) {
     .hero-flex {
         flex-direction: column;
@@ -657,7 +545,6 @@ footer {
 
     .hero-content h1 {
         font-size: 2.2rem;
-        /* Reduced size */
     }
 
     .nav-links {
@@ -669,7 +556,6 @@ footer {
     }
 }
 
-/* MOBILE RESPONSIVENESS FIX */
 @media (max-width: 768px) {
     .form-row {
         flex-direction: column;
@@ -680,8 +566,6 @@ footer {
         margin-bottom: 20px;
     }
 
-    /* slider */
-
     .service-card {
         height: 350px;
     }
@@ -691,7 +575,6 @@ footer {
     }
 }
 
-/* Large Mobile (max-width 500px) */
 @media (max-width: 500px) {
     .container {
         padding: 0 15px;
@@ -701,7 +584,6 @@ footer {
         padding: 40px 0 60px;
     }
 
-    /* REDUCED HERO FONT SIZE */
     .hero-content h1 {
         font-size: 1.8rem;
     }
@@ -716,20 +598,6 @@ footer {
 
     .section-title {
         font-size: 1.8rem;
-        /* Reduced Section Titles */
-    }
-
-    /* PRICING FONT REDUCTION */
-    .single-pricing-card {
-        padding: 30px 20px;
-    }
-
-    .price-header h3 {
-        font-size: 1.6rem;
-    }
-
-    .price-features li {
-        font-size: 1rem;
     }
 
     .footer-content {
@@ -738,10 +606,7 @@ footer {
     }
 }
 
-/* Small Mobile (max-width 360px) */
 @media (max-width: 360px) {
-
-    /* FURTHER REDUCED HERO FONT SIZE */
     .hero-content h1 {
         font-size: 1.6rem;
     }
@@ -756,21 +621,6 @@ footer {
         padding: 12px;
     }
 
-    .single-pricing-card {
-        padding: 25px 15px;
-    }
-
-    .price-features li {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-
-    .price-features .emoji {
-        margin-right: 0;
-    }
-
-    /* Form Font Reduction */
     .form-group label {
         font-size: 0.9rem;
     }
@@ -778,5 +628,363 @@ footer {
     .form-group input,
     .form-group select {
         font-size: 0.9rem;
+    }
+}
+
+
+/* =========================
+   NEW PREMIUM PRICING SECTION (Scoped)
+   (Applied to specific container to keep strict width)
+========================= */
+.new-pricing-section {
+    position: relative;
+    background-color: #05070a;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(192, 132, 252, 0.08) 0%, transparent 40%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Keeps the full screen look within the section */
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    padding: 60px 20px;
+    --border: rgba(255, 255, 255, 0.1);
+    --accent-light: #c084fc;
+}
+
+/* Background Music Elements */
+.music-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.music-note {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    font-size: 1.5rem;
+    animation: floatInfinite 15s linear infinite;
+}
+
+@keyframes floatInfinite {
+    0% {
+        transform: translateY(110vh) rotate(0deg) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.08;
+    }
+
+    90% {
+        opacity: 0.08;
+    }
+
+    100% {
+        transform: translateY(-20vh) rotate(360deg) translateX(30px);
+        opacity: 0;
+    }
+}
+
+/* Animation Delays for Notes */
+.n1 {
+    left: 5%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+
+.n2 {
+    left: 12%;
+    animation-duration: 14s;
+    animation-delay: 2s;
+    font-size: 2.2rem;
+}
+
+.n3 {
+    left: 22%;
+    animation-duration: 20s;
+    animation-delay: 5s;
+}
+
+.n4 {
+    left: 35%;
+    animation-duration: 16s;
+    animation-delay: 1s;
+    font-size: 2.5rem;
+}
+
+.n5 {
+    left: 45%;
+    animation-duration: 22s;
+    animation-delay: 8s;
+}
+
+.n6 {
+    left: 55%;
+    animation-duration: 15s;
+    animation-delay: 3s;
+    font-size: 1.8rem;
+}
+
+.n7 {
+    left: 68%;
+    animation-duration: 19s;
+    animation-delay: 6s;
+}
+
+.n8 {
+    left: 78%;
+    animation-duration: 13s;
+    animation-delay: 4s;
+    font-size: 2.1rem;
+}
+
+.n9 {
+    left: 90%;
+    animation-duration: 21s;
+    animation-delay: 2s;
+}
+
+.n10 {
+    left: 18%;
+    animation-duration: 17s;
+    animation-delay: 9s;
+    font-size: 1.3rem;
+}
+
+.n11 {
+    left: 28%;
+    animation-duration: 24s;
+    animation-delay: 4s;
+}
+
+.n12 {
+    left: 62%;
+    animation-duration: 12s;
+    animation-delay: 7s;
+    font-size: 2rem;
+}
+
+.n13 {
+    left: 85%;
+    animation-duration: 25s;
+    animation-delay: 1s;
+}
+
+.n14 {
+    left: 40%;
+    animation-duration: 16s;
+    animation-delay: 11s;
+}
+
+.n15 {
+    left: 72%;
+    animation-duration: 18s;
+    animation-delay: 5s;
+}
+
+/* Premium Glass Card (Exact Width: 90% / Max 600px as per your code) */
+.premium-card {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(25px);
+    border-radius: 40px;
+    padding: 50px;
+    border: 1px solid var(--border);
+    text-align: center;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.premium-card:hover {
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 50px 120px -20px rgba(168, 85, 247, 0.2);
+}
+
+.premium-card .badge {
+    display: inline-block;
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--accent-light);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.pricing-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    background: linear-gradient(to bottom, #fff 50%, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.desc {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.price-wrapper {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.currency {
+    font-size: 1.8rem;
+    color: var(--accent-light);
+    margin-right: 5px;
+}
+
+.amount {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: white;
+}
+
+.duration {
+    color: #64748b;
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+
+.offer-box {
+    position: relative;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    padding: 16px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+    color: #fca5a5;
+    animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.2);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+.discount-badge {
+    background: #ef4444;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.feature-item i {
+    color: #22c55e;
+    margin-right: 10px;
+}
+
+.pricing-cta-btn {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.pricing-cta-btn:hover {
+    transform: scale(1.02);
+    background: var(--accent-light);
+    color: white;
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
+}
+
+/* Specific Mobile Adjustments for the new Pricing Card */
+@media (max-width: 500px) {
+    .premium-card {
+        padding: 30px 20px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amount {
+        font-size: 4rem;
+    }
+
+    .pricing-title {
+        font-size: 2rem;
+    }
+
+    .offer-box {
+        flex-direction: column;
+        gap: 5px;
     }
 }
