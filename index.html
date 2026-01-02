@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,6 +20,7 @@
                 <h2>Song<span>Charm</span></h2>
             </div>
             <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
                 <li><a href="#samples">Samples</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#order-form">Start Song</a></li>
@@ -26,18 +28,20 @@
             <div class="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
-            <a href="https://wa.me/916378853658" class="whatsapp-btn-header" target="_blank">
-                <i class="fab fa-whatsapp"></i> <span>Contact</span>
-            </a>
         </div>
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
         <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <a href="#services" onclick="toggleMenu()">Services</a>
         <a href="#samples" onclick="toggleMenu()">Samples</a>
         <a href="#pricing" onclick="toggleMenu()">Pricing</a>
         <a href="#order-form" onclick="toggleMenu()">Start My Song</a>
     </div>
+
+    <a href="https://wa.me/916378853658" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <section class="hero">
         <div class="container hero-flex">
@@ -50,6 +54,90 @@
             <div class="hero-image">
                 <img src="https://media.istockphoto.com/id/2045330498/photo/girl-composer-playing-the-guitar-composing-new-song-outdoors-near-bonfire.jpg?s=612x612&w=0&k=20&c=IoNbE35AazD94cg_3V5_6NjL2CWGN9uQmSdE6YUt3Gg="
                     alt="Composer with guitar">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-slider-section">
+        <div class="container">
+            <h2 class="section-title">Our Custom Services</h2>
+
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Wedding.png" alt="Wedding Song">
+                            <div class="card-overlay">
+                                <h3>Wedding</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/birthday.png" alt="Birthday Song">
+                            <div class="card-overlay">
+                                <h3>Birthday</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/anniversary.png" alt="Anniversary Song">
+                            <div class="card-overlay">
+                                <h3>Anniversary</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/proposal.png" alt="Proposal Song">
+                            <div class="card-overlay">
+                                <h3>Proposal</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/friendship.png" alt="Friendship Song">
+                            <div class="card-overlay">
+                                <h3>Friendship</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/family.png" alt="Family Song">
+                            <div class="card-overlay">
+                                <h3>Family</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Baby Welcome.png" alt="Baby welcome">
+                            <div class="card-overlay">
+                                <h3>Baby Welcome</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/farewell.png" alt="Farewell">
+                            <div class="card-overlay">
+                                <h3>Farewell</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -70,7 +158,6 @@
                     </div>
                     <audio controls>
                         <source src="#" type="audio/mpeg">
-                        Your browser does not support audio.
                     </audio>
                 </div>
                 <div class="audio-card">
@@ -81,6 +168,34 @@
                         <div>
                             <h4>Upbeat Pop</h4>
                             <p>Best for Birthdays</p>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4>Romantic Ballad</h4>
+                            <p>Wedding & Proposals</p>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="#" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-drum"></i>
+                        </div>
+                        <div>
+                            <h4>Soft Rock</h4>
+                            <p>Energetic & Fun</p>
                         </div>
                     </div>
                     <audio controls>
@@ -246,59 +361,9 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 
-    <script>
-        // 1. Mobile Menu Toggle
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        }
-
-        // 2. Google Sheet Connection
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyPA6ilWYWFELe4-GkHEkMAnHf3HVGy3vSQnzEbQCWWfv5qQaulrI2mO4QkmiVNCIjm/exec';
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
-        const submitBtn = document.querySelector('.submit-btn');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-
-            // Show loading state
-            msg.innerHTML = "Sending details...";
-            msg.style.color = "#6c5ce7";
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = "0.7";
-
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    // Success State
-                    msg.innerHTML = "Success! We have received your story.";
-                    msg.style.color = "#25d366"; // Green
-                    form.reset(); // Clear the inputs
-
-                    // Reset button after 3 seconds
-                    setTimeout(function () {
-                        msg.innerHTML = "";
-                        submitBtn.disabled = false;
-                        submitBtn.style.opacity = "1";
-                    }, 5000);
-                })
-                .catch(error => {
-                    // Error State
-                    msg.innerHTML = "Error! Please check your internet.";
-                    msg.style.color = "red";
-                    submitBtn.disabled = false;
-                    submitBtn.style.opacity = "1";
-                    console.error('Error!', error.message);
-                });
-        });
-    </script>
 </body>
 
 </html>

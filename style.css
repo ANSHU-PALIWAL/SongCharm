@@ -8,19 +8,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* FIX FOR SMOOTH SCROLLING FLICKER */
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary: #6c5ce7;
-    /* Purple */
     --primary-dark: #5a4bcf;
     --dark-bg: #1a1a2e;
-    /* Deep Blue/Black */
     --card-bg: #2d2d5a;
-    /* Lighter Blue for cards */
     --gold: #FFD700;
-    /* Gold */
     --light: #ffffff;
     --success: #25d366;
-    /* WhatsApp Green */
     --gray-bg: #f4f4f9;
 }
 
@@ -95,22 +95,29 @@ header {
     color: var(--gold);
 }
 
-.whatsapp-btn-header {
-    background: var(--success);
-    color: white;
-    padding: 8px 18px;
+/* Sticky WhatsApp Button Styles */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #FFF;
     border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
+    justify-content: center;
+    text-decoration: none;
     transition: transform 0.3s;
 }
 
-.whatsapp-btn-header:hover {
-    transform: scale(1.05);
+.whatsapp-float:hover {
+    transform: scale(1.1);
 }
 
 /* Mobile Menu Toggle */
@@ -133,7 +140,7 @@ header {
     justify-content: center;
     align-items: center;
     transition: 0.3s ease;
-    z-index: 2000;
+    z-index: 1500;
 }
 
 .mobile-menu.active {
@@ -219,16 +226,16 @@ header {
 }
 
 /* =========================
-   4. SAMPLES SECTION (Restored)
+   4. SAMPLES SECTION
 ========================= */
 .preview-section {
     padding: 80px 0;
     background-color: #131324;
-    /* Dark Background restored */
 }
 
 .preview-grid {
     display: grid;
+    /* This creates automatic columns (2 columns on desktop approx) */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
@@ -274,7 +281,6 @@ header {
     width: 100%;
     height: 40px;
     filter: invert(1) hue-rotate(180deg);
-    /* Makes player white on dark bg */
     border-radius: 5px;
 }
 
@@ -371,7 +377,7 @@ header {
 }
 
 /* =========================
-   6. FORM SECTION (Restored)
+   6. FORM SECTION
 ========================= */
 
 /* Use Flexbox for side-by-side inputs */
@@ -389,9 +395,7 @@ header {
 /* Ensure inputs inside rows take full width of their column */
 .form-row .form-group {
     flex: 1;
-    /* Each input takes 50% width */
     margin-bottom: 0;
-    /* Remove bottom margin inside row to align perfectly */
 }
 
 .form-card {
@@ -444,7 +448,6 @@ header {
 .submit-btn {
     width: 100%;
     background: var(--success);
-    /* WhatsApp Green */
     color: white;
     padding: 16px;
     border: none;
@@ -460,12 +463,10 @@ header {
     transform: translateY(-2px);
 }
 
-/* Fix for Select dropdowns not matching height of inputs */
+/* Fix for Select dropdowns */
 select {
     height: 52px;
-    /* Matches standard input height */
     appearance: none;
-    /* Removes default browser styling for cleaner look */
     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-position: right 15px top 50%;
@@ -552,7 +553,98 @@ footer {
 }
 
 /* =========================
-   8. RESPONSIVE DESIGN
+   CORRECTED: SERVICES SLIDER
+========================= */
+.services-slider-section {
+    padding: 80px 0 60px;
+    /* Added padding bottom for pagination space */
+    background-color: #f8f9fa;
+}
+
+/* The Swiper Container */
+.services-swiper {
+    padding-bottom: 40px;
+    /* Ensure space inside container for dots if needed */
+}
+
+.service-card {
+    position: relative;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Stable shadow that doesn't move/drop on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    /* Removed transition on the card itself to stop the "lift" */
+}
+
+/* REMOVED the card lift effect to fix the "dropping shadow" issue */
+/* .service-card:hover { transform: translateY(-5px); } */
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    /* Slower, smoother zoom */
+}
+
+/* Only zoom the image on hover, keep card stable */
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Black Gradient Overlay */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 40px 20px 30px;
+    /* Adjusted padding */
+    z-index: 2;
+}
+
+.card-overlay h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+/* --- FIX PAGINATION POSITION --- */
+.services-slider-section .swiper-pagination {
+    position: relative;
+    /* Stops it from overlapping the slides */
+    bottom: 0 !important;
+    /* Reset default Swiper positioning */
+    margin-top: 30px;
+    /* Pushes it down away from images */
+    text-align: center;
+}
+
+/* Pagination Dots Styling */
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+    width: 25px;
+    /* Make active dot wider */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+
+/* =========================
+   8. RESPONSIVE DESIGN (Updated)
 ========================= */
 
 /* Tablet & Small Laptop (max-width 900px) */
@@ -564,7 +656,8 @@ footer {
     }
 
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        /* Reduced size */
     }
 
     .nav-links {
@@ -574,28 +667,27 @@ footer {
     .menu-toggle {
         display: block;
     }
-
-    .whatsapp-btn-header span {
-        display: none;
-    }
-
-    .whatsapp-btn-header {
-        padding: 10px;
-        border-radius: 50%;
-    }
 }
 
 /* MOBILE RESPONSIVENESS FIX */
 @media (max-width: 768px) {
     .form-row {
         flex-direction: column;
-        /* Stack inputs vertically on mobile */
         gap: 0;
     }
 
     .form-row .form-group {
         margin-bottom: 20px;
-        /* Add space between stacked inputs */
+    }
+
+    /* slider */
+
+    .service-card {
+        height: 350px;
+    }
+
+    .card-overlay h3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -609,16 +701,31 @@ footer {
         padding: 40px 0 60px;
     }
 
+    /* REDUCED HERO FONT SIZE */
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
     }
 
     .hero-image img {
         border-radius: 2rem;
     }
 
+    .section-title {
+        font-size: 1.8rem;
+        /* Reduced Section Titles */
+    }
+
+    /* PRICING FONT REDUCTION */
     .single-pricing-card {
         padding: 30px 20px;
+    }
+
+    .price-header h3 {
+        font-size: 1.6rem;
     }
 
     .price-features li {
@@ -633,12 +740,14 @@ footer {
 
 /* Small Mobile (max-width 360px) */
 @media (max-width: 360px) {
+
+    /* FURTHER REDUCED HERO FONT SIZE */
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hero-content p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .cta-btn {
@@ -651,10 +760,6 @@ footer {
         padding: 25px 15px;
     }
 
-    .price-header h3 {
-        font-size: 1.6rem;
-    }
-
     .price-features li {
         flex-direction: column;
         text-align: center;
@@ -663,5 +768,15 @@ footer {
 
     .price-features .emoji {
         margin-right: 0;
+    }
+
+    /* Form Font Reduction */
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
     }
 }
