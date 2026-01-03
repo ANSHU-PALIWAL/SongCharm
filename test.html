@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongCharm | Custom Music Creations</title>
+    <link rel="shortcut icon" href="/img/logo/50 - 50.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <div class="music-elements">
+        <i class="fa-solid fa-music music-note n1"></i>
+        <i class="fa-solid fa-headphones music-note n2"></i>
+        <i class="fa-solid fa-compact-disc music-note n3"></i>
+        <i class="fa-solid fa-microphone-lines music-note n4"></i>
+        <i class="fa-solid fa-sliders music-note n5"></i>
+        <i class="fa-solid fa-music music-note n6"></i>
+        <i class="fa-solid fa-guitar music-note n7"></i>
+        <i class="fa-solid fa-volume-high music-note n8"></i>
+        <i class="fa-solid fa-drum music-note n9"></i>
+        <i class="fa-solid fa-radio music-note n10"></i>
+        <i class="fa-solid fa-music music-note n11"></i>
+        <i class="fa-solid fa-microphone music-note n12"></i>
+        <i class="fa-solid fa-compact-disc music-note n13"></i>
+        <i class="fa-solid fa-headphones music-note n14"></i>
+        <i class="fa-solid fa-music music-note n15"></i>
+        <i class="fa-solid fa-play music-note n16"></i>
+        <i class="fa-solid fa-record-vinyl music-note n17"></i>
+        <i class="fa-solid fa-music music-note n18"></i>
+        <i class="fa-solid fa-guitar music-note n19"></i>
+        <i class="fa-solid fa-microphone-lines music-note n20"></i>
+        <i class="fa-solid fa-sliders music-note n21"></i>
+        <i class="fa-solid fa-music music-note n22"></i>
+        <i class="fa-solid fa-drum music-note n23"></i>
+        <i class="fa-solid fa-headphones music-note n24"></i>
+        <i class="fa-solid fa-radio music-note n25"></i>
+        <i class="fa-solid fa-music music-note n26"></i>
+        <i class="fa-solid fa-compact-disc music-note n27"></i>
+        <i class="fa-solid fa-volume-high music-note n28"></i>
+        <i class="fa-solid fa-microphone music-note n29"></i>
+        <i class="fa-solid fa-music music-note n30"></i>
+    </div>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="/img/logo/87 - 50.png" alt="SongCharm Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#samples">Samples</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#order-form">Start Song</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-menu" onclick="toggleMenu()">&times;</span>
+        <a href="#services" onclick="toggleMenu()">Services</a>
+        <a href="#samples" onclick="toggleMenu()">Samples</a>
+        <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+        <a href="#order-form" onclick="toggleMenu()">Start My Song</a>
+    </div>
+
+    <a href="https://wa.me/916378853658" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-content">
+                <h1>Turn Your Stories Into <span class="highlight">Unique Melodies</span></h1>
+                <p>Give us the details about your special someone, and we'll compose a professional, custom song that
+                    captures your bond forever. The perfect gift for birthdays, anniversaries, or just because.</p>
+                <a href="#order-form" class="cta-btn">Start Your Song</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://media.istockphoto.com/id/2045330498/photo/girl-composer-playing-the-guitar-composing-new-song-outdoors-near-bonfire.jpg?s=612x612&w=0&k=20&c=IoNbE35AazD94cg_3V5_6NjL2CWGN9uQmSdE6YUt3Gg="
+                    alt="Composer with guitar">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-slider-section">
+        <div class="container">
+            <h2 class="section-title">Our Custom Services</h2>
+
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Wedding.png" alt="Wedding Song">
+                            <div class="card-overlay">
+                                <h3>Wedding</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Birthday.png" alt="Birthday Song">
+                            <div class="card-overlay">
+                                <h3>Birthday</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Anniversary.png" alt="Anniversary Song">
+                            <div class="card-overlay">
+                                <h3>Anniversary</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Proposal.png" alt="Proposal Song">
+                            <div class="card-overlay">
+                                <h3>Proposal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Friendship.png" alt="Friendship Song">
+                            <div class="card-overlay">
+                                <h3>Friendship</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Family.png" alt="Family Song">
+                            <div class="card-overlay">
+                                <h3>Family</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Baby Welcome.png" alt="Baby welcome">
+                            <div class="card-overlay">
+                                <h3>Baby Welcome</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="service-card">
+                            <img src="/img/slider/Farewell.png" alt="Farewell">
+                            <div class="card-overlay">
+                                <h3>Farewell</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="samples" class="preview-section">
+        <div class="container">
+            <h2 class="section-title">Listen to Our Samples</h2>
+            <div class="preview-grid">
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <div>
+                            <h4>Romantic Song</h4>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="/audio/Romantic Song.mpeg" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div>
+                            <h4>Birthday Song</h4>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="/audio/Birthday Song.mpeg" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div>
+                            <h4>Friendship Song</h4>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="/audio/Friendship Song.mpeg" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-drum"></i>
+                        </div>
+                        <div>
+                            <h4>Love Story Song</h4>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="/audio/Love Story Sone.mpeg" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="audio-card">
+                    <div class="audio-info">
+                        <div class="audio-icon-box">
+                            <i class="fas fa-drum"></i>
+                        </div>
+                        <div>
+                            <h4>Welcome Baby Song</h4>
+                        </div>
+                    </div>
+                    <audio controls>
+                        <source src="/audio/Welcome Baby Song.mpeg" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="new-pricing-section">
+        <div class="premium-card">
+            <div class="badge">EXCLUSIVE ACCESS</div>
+
+            <h2 class="pricing-title">Song Charm</h2>
+            <p class="desc">A professionally composed song, uniquely yours.</p>
+
+            <div class="price-wrapper">
+                <span class="currency">₹</span>
+                <span class="amount">799</span>
+                <span class="duration">/ song</span>
+            </div>
+
+            <div class="offer-box">
+                <i class="fa-solid fa-bolt" style="color: #facc15;"></i>
+                <span>First 5 customers get</span>
+                <span class="discount-badge">30% OFF</span>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Studio Production</div>
+                <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Custom Lyrics</div>
+                <div class="feature-item"><i class="fa-solid fa-circle-check"></i> 24h Delivery</div>
+                <div class="feature-item"><i class="fa-solid fa-circle-check"></i> Full Ownership</div>
+            </div>
+
+            <a href="#order-form" style="text-decoration: none;">
+                <button class="pricing-cta-btn">
+                    Create Your Song
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <section id="order-form" class="form-section">
+        <div class="container">
+            <h2 class="section-title">Tell Us Your Story</h2>
+            <div class="form-card">
+                <p class="form-description">Fill out the details below so we can start composing your masterpiece.</p>
+
+                <form name="submit-to-google-sheet">
+                    <div class="form-group">
+                        <label>Your Full Name</label>
+                        <input type="text" name="Name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Mobile Number (WhatsApp)</label>
+                            <input type="tel" name="Mobile" placeholder="+91 XXXXX XXXXX" pattern="[0-9]{10}"
+                                title="Please enter a valid 10-digit number" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="Email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Who is this for?</label>
+                            <input type="text" name="Recipient" placeholder="e.g. Wife, Dad, Bestie" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Occasion</label>
+                            <select name="Occasion" required>
+                                <option hidden value="Select">Select</option>
+                                <option value="Birthday">Birthday</option>
+                                <option value="Anniversary">Anniversary</option>
+                                <option value="Wedding">Wedding / Proposal</option>
+                                <option value="Love">Love / Romantic</option>
+                                <option value="Sorry">Apology / Sorry</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Preferred Style (Genre)</label>
+                            <select name="Genre" required>
+                                <option hidden value="Select">Select</option>
+                                <option value="Acoustic">Acoustic (Guitar/Piano)</option>
+                                <option value="Bollywood Romantic">Bollywood Romantic</option>
+                                <option value="Upbeat Pop">Upbeat Pop</option>
+                                <option value="Rap/HipHop">Rap / HipHop</option>
+                                <option value="Sad/Emotional">Sad / Emotional</option>
+                                <option value="Rock">Soft Rock</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Song Language</label>
+                            <select name="Language" required>
+                                <option hidden value="Select">Select</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="English">English</option>
+                                <option value="Punjabi">Punjabi</option>
+                                <option value="Hinglish">Hinglish (Mix)</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Story / Details</label>
+                        <textarea name="Story" rows="5"
+                            placeholder="Tell us their hobbies, inside jokes, memories, or specific things you want in the lyrics..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Details</span>
+                        <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                    </button>
+
+                    <p id="msg" style="text-align: center; margin-top: 15px; font-weight: 600; font-size: 0.9rem;"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="/img/logo/87 - 50.png" alt="">
+                <p>Turning memories into melodies.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/song.charm?igsh=ZXB3YjFvdHRoY2lu" target="_blank"
+                        class="social-link insta">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/916378853658" target="_blank" class="social-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/songcharm.com/" target="_blank"
+                        class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:contact@songcharm.com" class="social-link email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SongCharm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
