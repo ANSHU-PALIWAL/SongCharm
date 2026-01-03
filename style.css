@@ -344,7 +344,7 @@ footer {
    3. HEADER & NAV
 ========================= */
 header {
-    height: 70px;
+    height: 80px;
     display: flex;
     align-items: center;
     /* Glass Effect Header */
@@ -363,9 +363,8 @@ header {
     width: 100%;
 }
 
-.logo img {
-    height: 40px;
-    /* Ensure logo fits */
+.logo {
+    display: flex;
 }
 
 .nav-links {
@@ -476,7 +475,7 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 20px;
     font-weight: 800;
@@ -517,7 +516,15 @@ header {
 
 .hero-image img {
     width: 100%;
-    border-radius: 3rem;
+    border-radius: 1rem;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.hero-image video {
+    width: 100%;
+    border-radius: 1rem;
     border: 1px solid var(--card-border);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     object-fit: cover;
@@ -661,7 +668,7 @@ header {
 ========================= */
 .new-pricing-section {
     position: relative;
-    padding: 100px 20px;
+    padding: 100px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -924,7 +931,7 @@ header {
 /* Submit Button */
 .submit-btn {
     width: 100%;
-    background: var(--success);
+    background: var(--primary);
     color: white;
     padding: 16px;
     border: none;
@@ -936,7 +943,7 @@ header {
 }
 
 .submit-btn:hover {
-    background: #1ebc57;
+    background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
 }
