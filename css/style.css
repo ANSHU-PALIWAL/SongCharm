@@ -365,7 +365,7 @@ header {
 
 .logo {
     display: flex;
-        width: 100px;
+    width: 100px;
     height: 50px;
 
 }
@@ -970,33 +970,133 @@ select option {
    9. FOOTER
 ========================= */
 footer {
-    background: rgba(5, 7, 10, 0.9);
+    background: rgba(5, 7, 10, 0.95);
     border-top: 1px solid var(--card-border);
     color: white;
-    padding: 60px 0 20px;
+    padding: 80px 0 0;
+    font-size: 0.95rem;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding-bottom: 60px;
 }
 
-.footer-brand h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.footer-col h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
 }
 
-.footer-brand p {
+.footer-col h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.brand-desc {
     color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-.footer-links h3 {
-    margin-bottom: 15px;
+.response-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+}
+
+.response-note i {
     color: var(--primary);
+}
+
+.contact-blurb {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-list li i {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 0.9rem;
+    border: 1px solid var(--card-border);
+}
+
+.contact-list li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-list li a:hover {
+    color: var(--primary);
+}
+
+.legal-links {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.legal-links li {
+    margin-bottom: 12px;
+}
+
+.legal-links li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    padding-left: 0;
+}
+
+.legal-links li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.social-title {
+    margin-top: 10px;
 }
 
 .social-icons {
@@ -1005,8 +1105,8 @@ footer {
 }
 
 .social-link {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--card-border);
@@ -1015,8 +1115,8 @@ footer {
     justify-content: center;
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
 .social-link:hover {
@@ -1047,7 +1147,8 @@ footer {
 .footer-bottom {
     text-align: center;
     border-top: 1px solid var(--card-border);
-    padding-top: 20px;
+    padding: 25px 0;
+    background: rgba(0, 0, 0, 0.3);
     font-size: 0.9rem;
     color: var(--text-muted);
 }
@@ -1092,6 +1193,16 @@ footer {
 
     .form-card {
         padding: 30px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-col h3::after {
+        margin-left: 0;
     }
 }
 

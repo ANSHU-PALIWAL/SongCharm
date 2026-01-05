@@ -1,0 +1,249 @@
+<section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Love Notes From Clients</h2>
+
+            <div class="swiper reviews-swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="video-wrapper">
+                                <video src="/img/video/review1.mp4" controls playsinline
+                                    poster="/img/video/poster1.jpg"></video>
+                            </div>
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"My wife literally cried when she heard it. Best anniversary gift
+                                    ever!"</p>
+                                <h4 class="client-name">- Rahul Sharma</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="video-wrapper">
+                                <video src="/img/video/review2.mp4" controls playsinline></video>
+                            </div>
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The lyrics were so personal. It felt like you guys knew our
+                                    story perfectly."</p>
+                                <h4 class="client-name">- Priya & Ankit</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="video-wrapper">
+                                <video src="/img/video/review3.mp4" controls playsinline></video>
+                            </div>
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="review-text">"Delivery was super fast. The quality is studio level. Highly
+                                    recommended!"</p>
+                                <h4 class="client-name">- Aman Verma</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="video-wrapper">
+                                <video src="/img/video/review4.mp4" controls playsinline></video>
+                            </div>
+                            <div class="review-content">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"Made my mom's 50th birthday unforgettable. Thank you SongCharm!"
+                                </p>
+                                <h4 class="client-name">- Sneha Gupta</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* =========================
+   TESTIMONIALS / REVIEWS
+========================= */
+.reviews-section {
+    padding: 80px 0;
+    background: transparent;
+}
+
+.reviews-swiper {
+    padding-bottom: 50px; /* Space for pagination dots */
+    padding-top: 20px;    /* Space for hover effects */
+}
+
+/* The Glass Card Container */
+.review-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Video Container - Enforces Vertical Aspect Ratio */
+.video-wrapper {
+    width: 100%;
+    height: 450px; /* Fixed height for consistency */
+    background: black;
+    position: relative;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills space without stretching */
+}
+
+/* Review Text Content */
+.review-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stars {
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: white;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.client-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Mobile Responsiveness for Review Cards */
+@media (max-width: 500px) {
+    .video-wrapper {
+        height: 350px; /* Slightly shorter on mobile phones */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// reviews js
+var reviewSwiper = new Swiper(".reviews-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000, // Slower autoplay so people can watch
+    disableOnInteraction: true, // Stops auto-scrolling if they touch it
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2, // 2 slides on tablets
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3, // 3 slides on desktop
+      spaceBetween: 30,
+    },
+  },
+});
