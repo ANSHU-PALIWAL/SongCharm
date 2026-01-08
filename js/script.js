@@ -60,3 +60,45 @@ var swiper = new Swiper(".services-swiper", {
     },
   },
 });
+
+var reviewSwiper = new Swiper(".reviews-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+
+  loop: false,
+  rewind: true,
+
+  grabCursor: true,
+  noSwiping: true,
+  noSwipingClass: "swiper-no-swiping",
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
+// to stop autoplay when video starts
+const videos = document.querySelectorAll(".reviews-swiper video");
+videos.forEach((video) => {
+  video.addEventListener("play", () => {
+    reviewSwiper.autoplay.stop();
+  });
+  video.addEventListener("ended", () => {
+    reviewSwiper.autoplay.start();
+  });
+});

@@ -1,6 +1,5 @@
-/* =========================
-   1. RESET & VARIABLES
-========================= */
+/* 1. RESET & VARIABLES */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
 * {
@@ -41,9 +40,7 @@ a {
     text-decoration: none;
 }
 
-/* =========================
-   2. HEADER & NAV
-========================= */
+/* 2. HEADER & NAV */
 header {
     height: 80px;
     display: flex;
@@ -127,13 +124,11 @@ header {
     color: white;
 }
 
-/* =========================
-   3. POLICY CONTENT STYLES
-========================= */
+/* 3. POLICY CONTENT STYLES */
+
 .policy-section {
     padding: 60px 0 80px;
     flex: 1;
-    /* Pushes footer down */
 }
 
 .policy-card {
@@ -212,9 +207,7 @@ header {
     font-weight: 600;
 }
 
-/* =========================
-   4. NEW 3-COLUMN FOOTER
-========================= */
+/* 4. NEW 3-COLUMN FOOTER */
 footer {
     background: rgba(5, 7, 10, 0.95);
     border-top: 1px solid var(--card-border);

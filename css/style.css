@@ -1,6 +1,5 @@
-/* =========================
-   1. RESET & VARIABLES
-========================= */
+/* 1. RESET & VARIABLES */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,20 +12,14 @@ html {
 }
 
 :root {
-    /* --- DARK THEME PALETTE --- */
     --primary: #c084fc;
-    /* Soft Purple Accent */
     --primary-dark: #a855f7;
-    /* Deep Purple */
     --dark-bg: #05070a;
-    /* Deepest Black/Blue Background */
     --glass-bg: rgba(15, 23, 42, 0.6);
-    /* Glass Card Background */
     --card-border: rgba(255, 255, 255, 0.1);
 
     --text-main: #ffffff;
     --text-muted: #94a3b8;
-    /* Slate Gray Text */
 
     --gold: #FFD700;
     --success: #22c55e;
@@ -34,13 +27,11 @@ html {
 }
 
 body {
-    /* Global Background applied here so the whole site matches the Pricing section */
     background-color: var(--dark-bg);
     background-image:
         radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.12) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(192, 132, 252, 0.08) 0%, transparent 40%);
     background-attachment: fixed;
-    /* Keeps the glow static while scrolling */
     color: var(--text-main);
     overflow-x: hidden;
     position: relative;
@@ -65,22 +56,16 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* =========================
-   2. BACKGROUND FLOATING ANIMATION
-========================= */
-/* Container for the floating notes */
+/* 2. BACKGROUND FLOATING ANIMATION */
 .music-elements {
     position: fixed;
-    /* Stick to screen while scrolling */
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    /* Click through them */
     z-index: 0;
-    /* Behind content, above background */
 }
 
 /* Ensure all other sections sit ON TOP of the notes */
@@ -95,17 +80,14 @@ footer {
     z-index: 2;
 }
 
-/* The Note Style */
 .music-note {
     position: absolute;
     color: rgba(255, 255, 255, 0.07);
-    /* Subtle white/transparent */
     bottom: -50px;
-    /* Start below screen */
     animation: floatInfinite linear infinite;
 }
 
-/* The Animation */
+/* Animation */
 @keyframes floatInfinite {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -123,7 +105,6 @@ footer {
 
     100% {
         transform: translateY(-120vh) rotate(360deg);
-        /* Move way up */
         opacity: 0;
     }
 }
@@ -340,14 +321,11 @@ footer {
     animation-delay: 2s;
 }
 
-/* =========================
-   3. HEADER & NAV
-========================= */
+/* 3. HEADER & NAV */
 header {
     height: 80px;
     display: flex;
     align-items: center;
-    /* Glass Effect Header */
     background: rgba(5, 7, 10, 0.7);
     backdrop-filter: blur(12px);
     position: sticky;
@@ -388,7 +366,7 @@ header {
     color: var(--primary);
 }
 
-/* Sticky WhatsApp Button */
+/* Sticky WhatsApp */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -413,7 +391,6 @@ header {
     transform: scale(1.1);
 }
 
-/* Mobile Menu */
 .menu-toggle {
     display: none;
     color: white;
@@ -458,13 +435,10 @@ header {
     cursor: pointer;
 }
 
-/* =========================
-   4. HERO SECTION
-========================= */
+/* 4. HERO SECTION */
 .hero {
     padding: 100px 0 100px;
     background: transparent;
-    /* Remove specific bg, use global */
 }
 
 .hero-flex {
@@ -533,9 +507,7 @@ header {
     object-fit: cover;
 }
 
-/* =========================
-   5. SERVICES SLIDER
-========================= */
+/* 5. SERVICES SLIDER */
 .services-slider-section {
     padding: 80px 0 60px;
     background: transparent;
@@ -602,9 +574,7 @@ header {
     transition: width 0.3s ease;
 }
 
-/* =========================
-   6. SAMPLES SECTION
-========================= */
+/* 6. SAMPLES SECTION */
 .preview-section {
     padding: 80px 0;
     background: transparent;
@@ -641,7 +611,6 @@ header {
     width: 50px;
     height: 50px;
     background: rgba(168, 85, 247, 0.15);
-    /* Low opacity purple */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -661,14 +630,11 @@ header {
     width: 100%;
     height: 40px;
     filter: invert(1) hue-rotate(180deg) saturate(0);
-    /* Make player monochrome/dark compatible */
     opacity: 0.8;
     border-radius: 5px;
 }
 
-/* =========================
-   7. PRICING SECTION
-========================= */
+/* 7. PRICING SECTION */
 .new-pricing-section {
     position: relative;
     padding: 100px 0px;
@@ -676,17 +642,16 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Background is handled by BODY now, so transparent here */
     background: transparent;
 }
 
-/* Premium Glass Card */
+/* Glass Card */
 .premium-card {
     position: relative;
     width: 90%;
     max-width: 600px;
     background: rgba(15, 23, 42, 0.7);
-    /* Darker glass */
+    /* Darker */
     backdrop-filter: blur(25px);
     border-radius: 40px;
     padding: 50px;
@@ -852,9 +817,7 @@ header {
     box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
 }
 
-/* =========================
-   8. FORM SECTION
-========================= */
+/* 8. FORM SECTION */
 .form-section {
     padding: 100px 0;
     background: transparent;
@@ -863,7 +826,6 @@ header {
 .form-card {
     max-width: 700px;
     margin: auto;
-    /* Glass Effect for Form */
     background: rgba(15, 23, 42, 0.7);
     backdrop-filter: blur(20px);
     padding: 40px;
@@ -898,7 +860,6 @@ header {
     margin-bottom: 8px;
     font-weight: 600;
     color: white;
-    /* Label color white */
     font-size: 0.95rem;
     margin-left: 5px;
 }
@@ -913,7 +874,6 @@ header {
     font-size: 1rem;
     transition: all 0.3s;
     background: rgba(0, 0, 0, 0.3);
-    /* Dark Input Fields */
     color: white;
 }
 
@@ -931,7 +891,6 @@ header {
     box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
 }
 
-/* Submit Button */
 .submit-btn {
     width: 100%;
     background: var(--primary);
@@ -951,7 +910,6 @@ header {
     box-shadow: 0 6px 10px #a855f7;
 }
 
-/* Fix Dropdown Arrow to be White */
 select {
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -966,9 +924,7 @@ select option {
     color: white;
 }
 
-/* =========================
-   9. FOOTER
-========================= */
+/* 9. FOOTER */
 footer {
     background: rgba(5, 7, 10, 0.95);
     border-top: 1px solid var(--card-border);
@@ -1153,9 +1109,86 @@ footer {
     color: var(--text-muted);
 }
 
-/* =========================
-   10. RESPONSIVE DESIGN
-========================= */
+/* TESTIMONIALS / REVIEWS */
+.reviews-section {
+    padding: 80px 0;
+    background: transparent;
+}
+
+.reviews-swiper {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.review-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(168, 85, 247, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 450px;
+    background: black;
+    position: relative;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stars {
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: white;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.client-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+@media (max-width: 500px) {
+    .video-wrapper {
+        height: 350px;
+    }
+}
+
+/* 10. RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
     .hero-flex {
