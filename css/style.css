@@ -509,9 +509,8 @@ header {
 
 /* 5. SERVICES SLIDER */
 .services-slider-section {
-    padding: 80px 0 60px;
+    padding: 40px 0 40px;
     background: transparent;
-    /* Glass theme */
 }
 
 .services-swiper {
@@ -576,7 +575,7 @@ header {
 
 /* 6. SAMPLES SECTION */
 .preview-section {
-    padding: 80px 0;
+    padding: 40px 0;
     background: transparent;
 }
 
@@ -637,7 +636,7 @@ header {
 /* 7. PRICING SECTION */
 .new-pricing-section {
     position: relative;
-    padding: 100px 0px;
+    padding: 60px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -819,7 +818,7 @@ header {
 
 /* 8. FORM SECTION */
 .form-section {
-    padding: 100px 0;
+    padding: 40px 0;
     background: transparent;
 }
 
@@ -1111,7 +1110,7 @@ footer {
 
 /* TESTIMONIALS / REVIEWS */
 .reviews-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background: transparent;
 }
 
